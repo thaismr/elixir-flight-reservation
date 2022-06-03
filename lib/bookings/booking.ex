@@ -3,7 +3,7 @@ defmodule Flightex.Bookings.Booking do
   @enforce_keys @keys
   defstruct @keys
 
-  def build(complete_date, local_origin, local_destination, user_id) do
+  def build(%NaiveDateTime{} = complete_date, local_origin, local_destination, user_id) do
     {:ok,
      %__MODULE__{
        id: UUID.uuid4(),
@@ -13,4 +13,7 @@ defmodule Flightex.Bookings.Booking do
        user_id: user_id
      }}
   end
+
+  def build(_complete_date, _local_origin, _local_destination, _user_id),
+    do: {:error, "Invalid date format"}
 end

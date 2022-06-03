@@ -32,6 +32,13 @@
       "test": "test call/1 when all params are valid, returns a valid tuple"
     },
     {
+      "describe": "get/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
+      "line": 55,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is't founded, returns an error"
+    },
+    {
       "describe": "save/1",
       "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
       "line": 18,
@@ -41,23 +48,9 @@
     {
       "describe": "get/1",
       "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
-      "line": 55,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is't founded, returns an error"
-    },
-    {
-      "describe": "get/1",
-      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
       "line": 42,
       "module": "Elixir.Flightex.Users.AgentTest",
       "test": "test get/1 when the user is found, returns the user"
-    },
-    {
-      "describe": "save/1",
-      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/booking_agent_test.exs",
-      "line": 15,
-      "module": "Elixir.Flightex.Bookings.AgentTest",
-      "test": "test save/1 when the param are valid, return a booking uuid"
     },
     {
       "describe": "get/1",
@@ -65,6 +58,13 @@
       "line": 53,
       "module": "Elixir.Flightex.Bookings.AgentTest",
       "test": "test get/1 when the user wasn't found, returns an error"
+    },
+    {
+      "describe": "save/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/booking_agent_test.exs",
+      "line": 15,
+      "module": "Elixir.Flightex.Bookings.AgentTest",
+      "test": "test save/1 when the param are valid, return a booking uuid"
     },
     {
       "describe": "get/1",
