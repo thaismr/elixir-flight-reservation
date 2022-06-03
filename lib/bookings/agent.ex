@@ -41,7 +41,7 @@ defmodule Flightex.Bookings.Agent do
          true <- y in [:lt, :eq] do
       true
     else
-      false
+      _ -> false
     end
   end
 
