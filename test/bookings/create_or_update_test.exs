@@ -32,5 +32,20 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
 
       assert response == expected_response
     end
+
+    test "when date format is invalid, returns an error" do
+      params = %{
+        complete_date: "2001-05-07 03:05:00",
+        local_origin: "Brasilia",
+        local_destination: "Bananeiras",
+        user_id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e"
+      }
+
+      expected_response = {:error, "Invalid date format"}
+
+      response = CreateOrUpdate.call(params)
+
+      assert response == expected_response
+    end
   end
 end

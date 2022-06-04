@@ -10,14 +10,10 @@ defmodule Flightex.Bookings.Report do
 
   def generate_report(from_date, to_date) do
     case build_booking_list(from_date, to_date) do
-      nil ->
-        {:error, "Unable to generate a report for given dates"}
-
+      [] -> {:error, "No booking found for requested dates"}
       booking_list ->
-        case File.write("report-by-date.csv", booking_list) do
-          {:ok, _report} -> {:ok, "Report generated successfully"}
-          error -> error
-        end
+        File.write("report-by-date.csv", booking_list)
+        {:ok, "Report generated successfully"}
     end
   end
 
@@ -28,10 +24,9 @@ defmodule Flightex.Bookings.Report do
   end
 
   defp build_booking_list(%NaiveDateTime{} = from_date, %NaiveDateTime{} = to_date) do
-    case BookingAgent.list_by_date(from_date, to_date) do
-      {:ok, booking_list} -> booking_list |> Map.values() |> Enum.map(&booking_string/1)
-      {:error, _reason} -> nil
-    end
+    BookingAgent.list_by_date(from_date, to_date)
+    |> Map.values()
+    |> Enum.map(&booking_string/1)
   end
 
   defp booking_string(%Booking{

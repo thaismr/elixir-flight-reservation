@@ -18,7 +18,7 @@ defmodule Flightex.Bookings.Agent do
   def list_all, do: Agent.get(__MODULE__, & &1)
 
   def list_by_date(from_date, to_date),
-    do: Agent.get(__MODULE__, &list_bookings_by_date(&1, from_date, to_date))
+    do: Agent.get(__MODULE__, &filter_by_date(&1, from_date, to_date))
 
   defp get_booking(state, uuid) do
     case Map.get(state, uuid) do
@@ -27,11 +27,9 @@ defmodule Flightex.Bookings.Agent do
     end
   end
 
-  defp list_bookings_by_date(state, from_date, to_date) do
-    case Enum.filter(state, &booking_between_dates?(&1, from_date, to_date)) do
-      nil -> {:error, "No booking found for given dates"}
-      booking_list -> {:ok, booking_list}
-    end
+  # Native Map.filter function available from Elixir version 1.13
+  defp filter_by_date(state, from_date, to_date) do
+    :maps.filter(fn _k, v -> booking_between_dates?(v, from_date, to_date) end, state)
   end
 
   defp booking_between_dates?(%Booking{complete_date: complete_date}, from_date, to_date) do
