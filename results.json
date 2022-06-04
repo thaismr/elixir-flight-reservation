@@ -25,20 +25,6 @@
       "test": "test build/4 when all params are valid, returns a booking"
     },
     {
-      "describe": "call/1",
-      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/create_or_update_test.exs",
-      "line": 13,
-      "module": "Elixir.Flightex.Bookings.CreateOrUpdateTest",
-      "test": "test call/1 when all params are valid, returns a valid tuple"
-    },
-    {
-      "describe": "get/1",
-      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
-      "line": 55,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is't founded, returns an error"
-    },
-    {
       "describe": "save/1",
       "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
       "line": 18,
@@ -48,16 +34,30 @@
     {
       "describe": "get/1",
       "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
+      "line": 55,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is't founded, returns an error"
+    },
+    {
+      "describe": "get/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/users/user_agent_test.exs",
       "line": 42,
       "module": "Elixir.Flightex.Users.AgentTest",
       "test": "test get/1 when the user is found, returns the user"
     },
     {
-      "describe": "get/1",
-      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/booking_agent_test.exs",
-      "line": 53,
-      "module": "Elixir.Flightex.Bookings.AgentTest",
-      "test": "test get/1 when the user wasn't found, returns an error"
+      "describe": "call/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/create_or_update_test.exs",
+      "line": 36,
+      "module": "Elixir.Flightex.Bookings.CreateOrUpdateTest",
+      "test": "test call/1 when date format is invalid, returns an error"
+    },
+    {
+      "describe": "call/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/create_or_update_test.exs",
+      "line": 13,
+      "module": "Elixir.Flightex.Bookings.CreateOrUpdateTest",
+      "test": "test call/1 when all params are valid, returns a valid tuple"
     },
     {
       "describe": "save/1",
@@ -69,9 +69,30 @@
     {
       "describe": "get/1",
       "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/booking_agent_test.exs",
+      "line": 53,
+      "module": "Elixir.Flightex.Bookings.AgentTest",
+      "test": "test get/1 when the user wasn't found, returns an error"
+    },
+    {
+      "describe": "get/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/booking_agent_test.exs",
       "line": 34,
       "module": "Elixir.Flightex.Bookings.AgentTest",
       "test": "test get/1 when the user is found, return a booking"
+    },
+    {
+      "describe": "create_or_update_booking/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/flightex_test.exs",
+      "line": 33,
+      "module": "Elixir.FlightexTest",
+      "test": "test create_or_update_booking/1 when all params are valid, returns a valid tuple"
+    },
+    {
+      "describe": "create_or_update_user/1",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/flightex_test.exs",
+      "line": 11,
+      "module": "Elixir.FlightexTest",
+      "test": "test create_or_update_user/1 when all params are valid, returns a valid tuple"
     },
     {
       "describe": "generate/1",
@@ -79,6 +100,20 @@
       "line": 15,
       "module": "Elixir.Flightex.Bookings.ReportTest",
       "test": "test generate/1 when called, return the content"
+    },
+    {
+      "describe": "generate_report/2",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/report_test.exs",
+      "line": 63,
+      "module": "Elixir.Flightex.Bookings.ReportTest",
+      "test": "test generate_report/2 when called with suitable dates, return success message"
+    },
+    {
+      "describe": "generate_report/2",
+      "file": "c:/Users/thais/vscode-projects/elixir-flight-reservation/test/bookings/report_test.exs",
+      "line": 41,
+      "module": "Elixir.Flightex.Bookings.ReportTest",
+      "test": "test generate_report/2 when called with suitable dates, generate report"
     },
     {
       "describe": "call/1",
